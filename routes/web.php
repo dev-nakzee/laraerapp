@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', function () {
-    return view('dashboard.modules.hrms.employees.index');
+    return view('dashboard.modules.hrms.position.index');
 });
+Route::get('/hrms/positions', 'PositionsController@index')->name('dashboard.hrms.position.index');
