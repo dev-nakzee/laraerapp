@@ -1,0 +1,9 @@
+.main-header .sidebar-toggle:before {
+	content: "\2630";
+}
+.logo-lg img {
+    width: 90% !important;
+}
+.logo-mini img {
+    height: 30px !important;
+}

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="{{ asset('assets/light/bootstrap/css/bootstrap.min.css') }}">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/Ayadu_icon.svg') }}">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -25,6 +25,8 @@
 <link rel="stylesheet" href="{{ asset('assets/light/css/themify-icons/themify-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/light/css/simple-lineicon/simple-line-icons.css') }}">
 
+<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
 <!-- jQuery 3 --> 
 <script src="{{ asset('assets/light/js/jquery.min.js') }}"></script> 
 
@@ -33,9 +35,6 @@
 
 <!-- template --> 
 <script src="{{ asset('assets/light/js/adminkit.js') }}"></script> 
-
-<script src="{{ asset('assets/light/plugins/functions/dashboard1.js') }}"></script> 
-
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,51 +48,52 @@
 <div class="wrapper boxed-wrapper">
   <header class="main-header"> 
     <!-- Logo --> 
-    <a href="index.html" class="logo blue-bg"> 
+    <a href="{{ env('APP_URL') }}" class="logo blue-bg"> 
     <!-- mini logo for sidebar mini 50x50 pixels --> 
-    <span class="logo-mini"><img src="dist/img/logo-n-blue.png" alt=""></span> 
+    <span class="logo-mini"><img src="{{ asset('assets/images/Ayadu_icon.svg') }}" alt=""></span> 
     <!-- logo for regular state and mobile devices --> 
-    <span class="logo-lg"><img src="dist/img/logo-blue.png" alt=""></span> </a> 
+    <span class="logo-lg"><img src="{{ asset('assets/images/ayadu_logo.svg') }}" alt=""></span> </a> 
     <!-- Header Navbar -->
     <nav class="navbar blue-bg navbar-static-top"> 
       <!-- Sidebar toggle button-->
       <ul class="nav navbar-nav pull-left">
         <li><a class="sidebar-toggle" data-toggle="push-menu" href="#"></a> </li>
       </ul>
-      <div class="pull-left search-box">
-        <form action="#" method="get" class="search-form">
-          <div class="input-group">
-            <input name="search" class="form-control" placeholder="" type="text">
-            <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
-            </span></div>
-        </form>
-        <!-- search form --> </div>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages -->
-          <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope-o"></i>
+          <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa-regular fa-envelope"></i>
             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
             </a>
             <ul class="dropdown-menu">
               <li class="header">You have 4 new messages</li>
               <li>
                 <ul class="menu">
-                  
+                  <li><a href="#">
+                    <div class="pull-left"><img src="dist/img/img4.jpg" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>
+                    <h4>Florence S. Kasper</h4>
+                    <p>I've finished it! See you so...</p>
+                    <p><span class="time">12:15 AM</span></p>
+                    </a></li>
                 </ul>
               </li>
               <li class="footer"><a href="#">View All Messages</a></li>
             </ul>
           </li>
           <!-- Notifications  -->
-          <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i>
+          <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa-regular fa-bell"></i>
             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
             </a>
             <ul class="dropdown-menu">
               <li class="header">Notifications</li>
               <li>
                 <ul class="menu">
-                  
+                  <li><a href="#">
+                    <div class="pull-left icon-circle red"><i class="icon-lightbulb"></i></div>
+                    <h4>Alex C. Patton</h4>
+                    <p>I've finished it! See you so...</p>
+                    <p><span class="time">9:30 AM</span></p>
+                    </a></li>
                 </ul>
               </li>
               <li class="footer"><a href="#">Check all Notifications</a></li>
