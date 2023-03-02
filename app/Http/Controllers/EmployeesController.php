@@ -3,18 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employees;
+use App\Models\Positions;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use DataTables;
 
 class EmployeesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
         //
+        $employees = Employees::join('positions','employees.position_id', 'positions.id')->get();
+        $positions = Positions::get();
+        return view('dashboard.modules.hrms.employees.index', compact('employees', 'positions'));
+    }
+
+     /**
+     * Display a listing of the resource.
+     */
+    public function list()
+    {
+
     }
 
     /**

@@ -18,6 +18,15 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', function () {
-    return view('dashboard.modules.hrms.position.index');
+    return redirect()->route('hrms.position.index');
 });
-Route::get('/hrms/positions', 'PositionsController@index')->name('dashboard.hrms.position.index');
+// HRMS Routes
+// Positions Routes
+Route::get('/hrms/positions', 'PositionsController@index')->name('hrms.position.index');
+
+
+// Employee Routes
+Route::get('/hrms/employees', 'EmployeesController@index')->name('hrms.employees.index');
+
+//
+Route::get('/hrms/positions', 'PositionsController@index')->name('hrms.position.index');

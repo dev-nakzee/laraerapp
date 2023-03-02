@@ -6,15 +6,25 @@ use App\Models\Positions;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use DataTables;
 
 class PositionsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
-        //
+        $positions = Positions::select('id', 'position','max_position','description')->get();
+        return view('dashboard.modules.hrms.positions.index', compact('positions'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function list()
+    {
+
     }
 
     /**
