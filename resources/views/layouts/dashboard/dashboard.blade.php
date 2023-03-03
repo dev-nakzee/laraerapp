@@ -27,6 +27,9 @@
 <link rel="stylesheet" href="{{ asset('assets/datatables/datatables.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
+<!-- form wizard -->
+<link rel="stylesheet" href="{{ asset('assets/light/plugins/formwizard/jquery-steps.css')}}">
+
 <!-- jQuery 3 --> 
 <script src="{{ asset('assets/light/js/jquery.min.js') }}"></script> 
 
@@ -39,6 +42,10 @@
 <script src="{{ asset('assets/datatables/datatables.min.js') }}"></script> 
 
 <script src="{{ asset('assets/js/popper.min.js') }}"></script> 
+
+<!-- form wizard --> 
+<script src="{{ asset('assets/light/plugins/formwizard/jquery-steps.js')}}"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script> 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,7 +81,7 @@
               <li>
                 <ul class="menu">
                   <li><a href="#">
-                    <div class="pull-left"><img src="dist/img/img4.jpg" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>
+                    <div class="pull-left"><img src="{{asset('assets/light/img/img4.jpg')}}" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>
                     <h4>Florence S. Kasper</h4>
                     <p>I've finished it! See you so...</p>
                     <p><span class="time">12:15 AM</span></p>
