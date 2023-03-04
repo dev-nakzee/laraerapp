@@ -30,3 +30,7 @@ Route::get('/hrms/employees', 'EmployeesController@index')->name('hrms.employees
 
 //
 Route::get('/hrms/positions', 'PositionsController@index')->name('hrms.position.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
