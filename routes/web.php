@@ -14,7 +14,7 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return redirect('https://xeniuminfotech.in/');
+    return redirect('https://app.xeniuminfotech.in/');
 });
 
 Route::get('/admin', function () {
