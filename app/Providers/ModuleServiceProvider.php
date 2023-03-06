@@ -24,8 +24,8 @@ class ModuleServiceProvider extends ServiceProvider
     {
         // Layout sidebar navigation
         view()->composer('layouts.dashboard.partials.sidemenu', function($view){
-            $modules = ModuleMaster::where('status', 1)->get();
-            $submodules = SubmoduleMaster::where('status',1)->get();
+            $modules = ModuleMaster::where('status', 1)->orderBy('sort_order')->get();
+            $submodules = SubmoduleMaster::where('status',1)->orderBy('sort_order')->get();
             $view->with(['modules' => $modules, 'submodules' => $submodules]);
         });
 

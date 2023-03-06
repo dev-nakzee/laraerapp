@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Ayadu_MSMERP'),
+    'name' => env('APP_NAME', 'Xenium_Infotech'),
 
     /*
     |--------------------------------------------------------------------------
