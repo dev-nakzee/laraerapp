@@ -13,9 +13,7 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', function () {
-    return redirect('https://app.xeniuminfotech.in/');
-});
+Route::get('/home', 'HomeController@index')->name('site.home');
 
 Route::get('/admin', function () {
     return redirect()->route('hrms.position.index');
@@ -33,4 +31,4 @@ Route::get('/hrms/positions', 'PositionsController@index')->name('hrms.position.
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
